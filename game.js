@@ -72,6 +72,7 @@ choices.forEach(choice => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
+        
         if(selectedAnswer == currentQuestion.answer){
             selectedChoice.parentElement.classList.add('correct')
             setTimeout( () =>{
@@ -80,12 +81,12 @@ choices.forEach(choice => {
                        }, 1000)
         }else if(selectedAnswer !== currentQuestion.answer){
             selectedChoice.parentElement.classList.add('incorrect')
-            question.correct_answer.parentElement.classList.add('correct')
-            // currentQuestion.answer.parentElement.classList.add('correct')
+            
+           
             
             setTimeout( () =>{
                 selectedChoice.parentElement.classList.remove('incorrect');
-                // currentQuestion.answer.parentElement.classList.remove('correct');
+               
                 getNewQuestion()
                }, 1000)
         }
