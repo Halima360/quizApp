@@ -74,6 +74,7 @@ choices.forEach(choice => {
         const selectedAnswer = selectedChoice.dataset["number"];
         
         if(selectedAnswer == currentQuestion.answer){
+            selectedAnswer == currentQuestion.answer ? `${increment(CORRECT_BONUS)}` : `${increment(0)}`
             selectedChoice.parentElement.classList.add('correct')
             setTimeout( () =>{
                         selectedChoice.parentElement.classList.remove('correct');
